@@ -20,13 +20,13 @@
 return [
     'doctrine' => [
         'driver' => [
-            'zf2board_driver' => [
+            'zf2board_zfcuser_driver' => [
                 'class' => 'Doctrine\ORM\Mapping\Driver\XmlDriver',
                 'paths' => __DIR__ . '/xml/zf2board',
             ],
             'orm_default' => [
                 'drivers' => [
-                    'E4W\Zf2Board' => 'zf2board_driver'
+                    'E4W\Zf2Board' => 'zf2board_zfcuser_driver'
                 ]
             ]
         ],

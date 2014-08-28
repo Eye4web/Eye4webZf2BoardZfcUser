@@ -4,11 +4,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                   http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <mapped-superclass name="E4W\Zf2Board\Entity\Topic" table="topics">
-
-        <many-to-one field="user" target-entity="ZfcUser\Entity\User">
-            <join-column name="user_id" referenced-column-name="user_id" />
-        </many-to-one>
+    <mapped-superclass name="E4W\Zf2Board\Entity\Board">
 
     </mapped-superclass>
 

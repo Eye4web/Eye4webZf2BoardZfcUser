@@ -20,6 +20,7 @@
 namespace E4W\Zf2BoardZfcUser;
 
 use Zend\Mvc\MvcEvent;
+use Doctrine\ORM\Mapping\Driver\XmlDriver;
 
 class Module
 {
@@ -31,11 +32,7 @@ class Module
 
         /** @var \E4W\Zf2Board\Options\ModuleOptions $moduleOptions */
         $moduleOptions = $serviceManager->get('E4W\Zf2Board\Options\ModuleOptions');
-
-        /** @var \Zend\Authentication\AuthenticationService $zfcUserAuthenticationService */
-        $zfcUserAuthenticationService = $serviceManager->get('zfcuser_auth_service');
-
-        $moduleOptions->setAuthenticationService($zfcUserAuthenticationService);
+        $moduleOptions->setAuthenticationService('zfcuser_auth_service');
     }
 
     public function getConfig()
