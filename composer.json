@@ -1,0 +1,36 @@
+{
+    "name": "eye4web/e4w-zf2-board-zfc-user",
+    "description": "ZfcUser integration for E4W\\Zf2Board",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "zf2",
+        "board",
+        "forum",
+        "zfcuser"
+    ],
+    "homepage": "https://github.com/Eye4web/E4WZf2BoardZfcUser",
+    "authors": [
+        {
+            "name": "Nikolaj Løvenhardt Petersen",
+            "email": "np@eye4web.dk"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "master-dev"
+        }
+    },
+    "require": {
+        "php": ">=5.5",
+        "eye4web/e4w-zf2-board": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "E4W\\Zf2BoardZfcUser": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
