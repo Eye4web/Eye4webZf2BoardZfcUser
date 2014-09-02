@@ -33,6 +33,10 @@ class Module
         /** @var \E4W\Zf2Board\Options\ModuleOptions $moduleOptions */
         $moduleOptions = $serviceManager->get('E4W\Zf2Board\Options\ModuleOptions');
         $moduleOptions->setAuthenticationService('zfcuser_auth_service');
+
+        /** @var \ZfcUserDoctrineORM\Options\ModuleOptions $zfcUserOptions */
+        $zfcUserOptions = $serviceManager->get('zfcuser_module_options');
+        $moduleOptions->setAuthorEntity($zfcUserOptions->getUserEntityClass());
     }
 
     public function getConfig()
