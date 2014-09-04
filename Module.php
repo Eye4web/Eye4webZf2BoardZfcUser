@@ -17,7 +17,7 @@
  * and is licensed under the MIT license.
  */
 
-namespace E4W\Zf2BoardZfcUser;
+namespace Eye4web\Zf2BoardZfcUser;
 
 use Zend\Mvc\MvcEvent;
 use Doctrine\ORM\Mapping\Driver\XmlDriver;
@@ -30,15 +30,15 @@ class Module
 
         // Set authentication service
 
-        /** @var \E4W\Zf2Board\Options\ModuleOptions $moduleOptions */
-        $moduleOptions = $serviceManager->get('E4W\Zf2Board\Options\ModuleOptions');
+        /** @var \Eye4web\Zf2Board\Options\ModuleOptions $moduleOptions */
+        $moduleOptions = $serviceManager->get('Eye4web\Zf2Board\Options\ModuleOptions');
         $moduleOptions->setAuthenticationService('zfcuser_auth_service');
 
         /** @var \ZfcUserDoctrineORM\Options\ModuleOptions $zfcUserOptions */
         $zfcUserOptions = $serviceManager->get('zfcuser_module_options');
 
         if (!$zfcUserOptions) {
-            throw new \Exception('Please install ZfcUser in order to use E4W\Zf2BoardZfcUser');
+            throw new \Exception('Please install ZfcUser in order to use Eye4web\Zf2BoardZfcUser');
         }
 
         $moduleOptions->setAuthorEntity($zfcUserOptions->getUserEntityClass());
