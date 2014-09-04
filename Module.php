@@ -36,12 +36,12 @@ class Module
 
         /** @var \ZfcUserDoctrineORM\Options\ModuleOptions $zfcUserOptions */
         $zfcUserOptions = $serviceManager->get('zfcuser_module_options');
-        $moduleOptions->setAuthorEntity($zfcUserOptions->getUserEntityClass());
-    }
 
-    public function getConfig()
-    {
-        return include __DIR__ . '/config/module.config.php';
+        if (!$zfcUserOptions) {
+            throw new \Exception('Please install ZfcUser in order to use E4W\Zf2BoardZfcUser');
+        }
+
+        $moduleOptions->setAuthorEntity($zfcUserOptions->getUserEntityClass());
     }
 
     public function getAutoloaderConfig()
