@@ -23,7 +23,7 @@
     },
     "require": {
         "php": "^8.1",
-        "eye4web/eye4web-zf2-board": "dev-laminas3"
+        "eye4web/eye4web-zf2-board": "dev-master"
     },
     "autoload": {
         "psr-0": {
